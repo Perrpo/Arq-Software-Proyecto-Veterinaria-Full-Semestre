@@ -62,7 +62,10 @@ public class DataReporter
             var vet = c.IdVeterinario.HasValue
                 ? _data.Veterinarios.FirstOrDefault(v => v.IdVeterinario == c.IdVeterinario.Value)?.Nombre ?? $"Vet {c.IdVeterinario}"
                 : "Sin asignar";
-            Console.WriteLine($"{c.IdCita} | Paciente: {c.IdPaciente} | Servicio: {c.IdServicio} | Usuario: {c.IdUsuario} | Vet: {vet} | {c.FechaCita:yyyy-MM-dd HH:mm:ss} | Estado: {c.Estado}");
+            var paciente = _data.Pacientes.FirstOrDefault(p => p.IdPaciente == c.IdPaciente)?.Nombre ?? $"Paciente {c.IdPaciente}";
+            var servicio = _data.Servicios.FirstOrDefault(s => s.IdServicio == c.IdServicio)?.Nombre ?? $"Servicio {c.IdServicio}";
+            var usuario = _data.Usuarios.FirstOrDefault(u => u.IdUsuario == c.IdUsuario)?.Nombre ?? $"Usuario {c.IdUsuario}";
+            Console.WriteLine($"{c.IdCita} | {paciente} | {servicio} | Cliente: {usuario} | Vet: {vet} | {c.FechaCita:yyyy-MM-dd HH:mm:ss} | Estado: {c.Estado}");
         }
         Console.WriteLine();
     }
@@ -72,7 +75,9 @@ public class DataReporter
         Console.WriteLine("=== Pagos ===");
         foreach (var p in _data.Pagos.OrderBy(p => p.IdPago))
         {
-            Console.WriteLine($"{p.IdPago} | Cita: {p.IdCita} | {p.MetodoPago} | Bruto: ${p.Monto.ToString("N0", _culture)} | Desc: ${p.Descuento.ToString("N0", _culture)} | Neto: ${p.MontoNeto.ToString("N0", _culture)} | {p.FechaPago:yyyy-MM-dd HH:mm:ss} | Estado: {p.Estado}");
+            var cita = _data.Citas.FirstOrDefault(c => c.IdCita == p.IdCita);
+            var paciente = cita is null ? $"Cita {p.IdCita}" : _data.Pacientes.FirstOrDefault(pa => pa.IdPaciente == cita.IdPaciente)?.Nombre ?? $"Paciente {cita.IdPaciente}";
+            Console.WriteLine($"{p.IdPago} | Cita: {p.IdCita} ({paciente}) | {p.MetodoPago} | Bruto: ${p.Monto.ToString("N0", _culture)} | Desc: ${p.Descuento.ToString("N0", _culture)} | Neto: ${p.MontoNeto.ToString("N0", _culture)} | {p.FechaPago:yyyy-MM-dd HH:mm:ss} | Estado: {p.Estado}");
         }
         Console.WriteLine();
     }
@@ -84,7 +89,8 @@ public class DataReporter
         {
             var obs = string.IsNullOrWhiteSpace(e.Observaciones) ? "-" : e.Observaciones;
             var res = string.IsNullOrWhiteSpace(e.Resultado) ? "-" : e.Resultado;
-            Console.WriteLine($"{e.IdExamen} | Paciente: {e.IdPaciente} | {e.TipoExamen} | {e.FechaExamen:yyyy-MM-dd HH:mm:ss} | Estado: {e.Estado} | Resultado: {res} | Obs: {obs}");
+            var paciente = _data.Pacientes.FirstOrDefault(p => p.IdPaciente == e.IdPaciente)?.Nombre ?? $"Paciente {e.IdPaciente}";
+            Console.WriteLine($"{e.IdExamen} | Paciente: {paciente} | {e.TipoExamen} | {e.FechaExamen:yyyy-MM-dd HH:mm:ss} | Estado: {e.Estado} | Resultado: {res} | Obs: {obs}");
         }
         Console.WriteLine();
     }

@@ -23,12 +23,12 @@ public class PagoService : IPagoService
     public IReadOnlyCollection<Pago> ObtenerPorCita(int idCita) =>
         _data.Pagos.Where(p => p.IdCita == idCita).ToList().AsReadOnly();
 
-    public Pago RegistrarPago(int idCita, string metodoPago, decimal monto, decimal descuento = 0)
+    public Pago RegistrarPago(int idCita, string metodoPago, decimal monto, decimal descuento = 0, DateTime? fechaPago = null)
     {
         var cita = _citaService.ObtenerPorId(idCita) ?? throw new InvalidOperationException($"Cita {idCita} no existe");
         var pagoId = _data.Pagos.Count == 0 ? 1 : _data.Pagos.Max(p => p.IdPago) + 1;
 
-        var pago = new Pago(pagoId, cita.IdCita, metodoPago, monto, descuento, DateTime.Now, "registrado");
+        var pago = new Pago(pagoId, cita.IdCita, metodoPago, monto, descuento, fechaPago ?? DateTime.Now, "pagado");
 
         _data.Pagos.Add(pago);
         return pago;

@@ -16,15 +16,15 @@ public class InMemoryData
     {
         Usuarios = new()
         {
-            new Usuario { IdUsuario = 1, Nombre = "Admin", Apellido = "Sistema", Email = "admin@vetcare.com", Password = "$2b$10$FBHsPDmQ0KQLtjKf68NmUOszahnQHrMjWzIPhvGWZgrJgyKG9MxHe", Telefono = "+57 300 000 0000", Direccion = "Oficina Central", Rol = "admin", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
-            new Usuario { IdUsuario = 2, Nombre = "María", Apellido = "González", Email = "maria.gonzalez@email.com", Password = "$2a$10$B7o8Jm7M2i7wO8r9qS1pUe6O9wT2yXj3d2u1aQpWq6h8l9d0cN8uK", Telefono = "+57 300 123 456", Direccion = "Calle Mayor 123, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
-            new Usuario { IdUsuario = 3, Nombre = "Carlos", Apellido = "Rodríguez", Email = "carlos.rodriguez@veterinaria.com", Password = "$2a$10$B7o8Jm7M2i7wO8r9qS1pUe6O9wT2yXj3d2u1aQpWq6h8l9d0cN8uK", Telefono = "+57 300 789 018", Direccion = "Avenida Veterinaria 45, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
-            new Usuario { IdUsuario = 4, Nombre = "Ana", Apellido = "López", Email = "ana.lopez@email.com", Password = "$2a$10$B7o8Jm7M2i7wO8r9qS1pUe6O9wT2yXj3d2u1aQpWq6h8l9d0cN8uK", Telefono = "+57 300 345 678", Direccion = "Plaza Central 8, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
-            new Usuario { IdUsuario = 5, Nombre = "Elena", Apellido = "Martín", Email = "elena.martin@veterinaria.com", Password = "$2a$10$B7o8Jm7M2i7wO8r9qS1pUe6O9wT2yXj3d2u1aQpWq6h8l9d0cN8uK", Telefono = "+57 300 555 444", Direccion = "Consulta 2, Bogotá", Rol = "veterinario", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
-            new Usuario { IdUsuario = 6, Nombre = "Nicole", Apellido = "Yuqui", Email = "nicole@gmail.com", Password = "", Telefono = "3123821739", Direccion = "Mi casa", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 17:55:18") },
-            new Usuario { IdUsuario = 17, Nombre = "Andres", Apellido = "Felipe", Email = "andresfelipe@gmail.com", Password = "$2b$10$3T/gKkyKteSAkWXA0EP8neOytpPqdx06Ohbkzy95MaCb.1Ca7sydK", Telefono = "3503374876", Direccion = "Al costado de mi vecino", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 20:22:37") },
-            new Usuario { IdUsuario = 18, Nombre = "Jose", Apellido = "Velez", Email = "josevelez@gmail.com", Password = "$2b$10$jw6tq4ZDD4PNTR/V083skOiXDFIq9KPtNgj2VpffaeWi4RcvfUlEC", Telefono = "3059305930", Direccion = "Al costado de mi vecino", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-04 17:54:43") },
-            new Usuario { IdUsuario = 19, Nombre = "Andres", Apellido = "Nunez", Email = "andres@gmail.com", Password = "$2b$10$WfASd1APRDfk85oO8kA0hOEMycnbIZvkB7jRUe5JEcFkelflzQK/S", Telefono = "389271983271", Direccion = "meedellin", Rol = "cliente", FechaRegistro = DateTime.Parse("2026-02-14 19:39:56") }
+            new Usuario { IdUsuario = 1, Nombre = "Admin", Apellido = "Sistema", Email = "admin@vetcare.com", Telefono = "+57 300 000 0000", Direccion = "Oficina Central", Rol = "admin", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
+            new Usuario { IdUsuario = 2, Nombre = "María", Apellido = "González", Email = "maria.gonzalez@email.com", Telefono = "+57 300 123 456", Direccion = "Calle Mayor 123, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
+            new Usuario { IdUsuario = 3, Nombre = "Carlos", Apellido = "Rodríguez", Email = "carlos.rodriguez@veterinaria.com", Telefono = "+57 300 789 018", Direccion = "Avenida Veterinaria 45, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
+            new Usuario { IdUsuario = 4, Nombre = "Ana", Apellido = "López", Email = "ana.lopez@email.com", Telefono = "+57 300 345 678", Direccion = "Plaza Central 8, Bogotá", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
+            new Usuario { IdUsuario = 5, Nombre = "Elena", Apellido = "Martín", Email = "elena.martin@veterinaria.com", Telefono = "+57 300 555 444", Direccion = "Consulta 2, Bogotá", Rol = "veterinario", FechaRegistro = DateTime.Parse("2025-09-03 02:27:55") },
+            new Usuario { IdUsuario = 6, Nombre = "Nicole", Apellido = "Yuqui", Email = "nicole@gmail.com", Telefono = "3123821739", Direccion = "Mi casa", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 17:55:18") },
+            new Usuario { IdUsuario = 17, Nombre = "Andres", Apellido = "Felipe", Email = "andresfelipe@gmail.com", Telefono = "3503374876", Direccion = "Al costado de mi vecino", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-03 20:22:37") },
+            new Usuario { IdUsuario = 18, Nombre = "Jose", Apellido = "Velez", Email = "josevelez@gmail.com", Telefono = "3059305930", Direccion = "Al costado de mi vecino", Rol = "cliente", FechaRegistro = DateTime.Parse("2025-09-04 17:54:43") },
+            new Usuario { IdUsuario = 19, Nombre = "Andres", Apellido = "Nunez", Email = "andres@gmail.com", Telefono = "389271983271", Direccion = "meedellin", Rol = "cliente", FechaRegistro = DateTime.Parse("2026-02-14 19:39:56") }
         },
         Servicios = new()
         {
@@ -79,7 +79,12 @@ public class InMemoryData
         {
             new Veterinario(1, "Dra. Elena Martín", new[] { "medicina_general", "cirugia" }),
             new Veterinario(2, "Dr. Carlos Rodríguez", new[] { "medicina_general", "dermatologia" }),
-            new Veterinario(3, "Dra. Ana López", new[] { "urgencias" })
+            new Veterinario(3, "Dra. Ana López", new[] { "urgencias" }),
+            new Veterinario(4, "Dr. Javier Pérez", new[] { "cirugia" }),
+            new Veterinario(5, "Dra. Sofía Mejía", new[] { "urgencias", "medicina_general" }),
+            new Veterinario(6, "Dr. Miguel Torres", new[] { "dermatologia" }),
+            new Veterinario(7, "Dra. Paula Ríos", new[] { "medicina_general" }),
+            new Veterinario(8, "Dr. Luis Gómez", new[] { "medicina_general", "dermatologia" })
         }
     };
 }

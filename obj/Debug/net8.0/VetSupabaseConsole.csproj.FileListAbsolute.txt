@@ -1,0 +1,15 @@
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\bin\Debug\net8.0\VetSupabaseConsole.exe
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\bin\Debug\net8.0\VetSupabaseConsole.deps.json
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\bin\Debug\net8.0\VetSupabaseConsole.runtimeconfig.json
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\bin\Debug\net8.0\VetSupabaseConsole.dll
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\bin\Debug\net8.0\VetSupabaseConsole.pdb
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.AssemblyInfoInputs.cache
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.AssemblyInfo.cs
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.csproj.CoreCompileInputs.cache
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.sourcelink.json
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.dll
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\refint\VetSupabaseConsole.dll
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.pdb
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\VetSupabaseConsole.genruntimeconfig.cache
+C:\Users\fresc\OneDrive\Documentos\Mis Trabajos De La U\Arquitectura de Software\Ejercicio-Full-Stack-Veterinaria-dev\VetSupabaseConsole\obj\Debug\net8.0\ref\VetSupabaseConsole.dll

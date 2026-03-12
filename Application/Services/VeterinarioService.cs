@@ -9,11 +9,13 @@ public class VeterinarioService : IVeterinarioService
 {
     private readonly InMemoryData _data;
     private readonly ICitaService _citaService;
+    private readonly IVetAssignmentStrategy _strategy;
 
-    public VeterinarioService(InMemoryData data, ICitaService citaService)
+    public VeterinarioService(InMemoryData data, ICitaService citaService, IVetAssignmentStrategy strategy)
     {
         _data = data;
         _citaService = citaService;
+        _strategy = strategy;
     }
 
     public IReadOnlyCollection<Veterinario> ObtenerTodos() => _data.Veterinarios.AsReadOnly();
@@ -26,20 +28,28 @@ public class VeterinarioService : IVeterinarioService
             .ToList()
             .AsReadOnly();
 
-    public Veterinario AsignarACita(int idCita, int idVeterinario)
+    public Veterinario AsignarACita(int idCita, int? idVeterinarioPreferido = null)
     {
         var cita = _citaService.ObtenerPorId(idCita) ?? throw new InvalidOperationException($"Cita {idCita} no existe");
         var servicio = _data.Servicios.FirstOrDefault(s => s.IdServicio == cita.IdServicio)
             ?? throw new InvalidOperationException($"Servicio {cita.IdServicio} no existe");
         var especialidadRequerida = servicio.EspecialidadRequerida;
 
-        var vet = ObtenerPorId(idVeterinario) ?? throw new InvalidOperationException($"Veterinario {idVeterinario} no existe");
-        if (!vet.TieneEspecialidad(especialidadRequerida))
-            throw new InvalidOperationException($"El veterinario {vet.Nombre} no cubre la especialidad requerida ({especialidadRequerida}).");
-
         var duracion = TimeSpan.FromMinutes(cita.DuracionMinutos);
-        if (!vet.EstaDisponible(cita.FechaCita, duracion))
-            throw new InvalidOperationException($"Veterinario {vet.Nombre} ya tiene una cita en ese horario.");
+        var candidatos = Disponibles(cita.FechaCita, duracion, especialidadRequerida);
+        if (!candidatos.Any())
+            throw new InvalidOperationException("No hay veterinarios disponibles con la especialidad requerida.");
+
+        Veterinario vet;
+        if (idVeterinarioPreferido.HasValue)
+        {
+            vet = candidatos.FirstOrDefault(v => v.IdVeterinario == idVeterinarioPreferido.Value)
+                  ?? throw new InvalidOperationException("El veterinario preferido no está disponible en ese horario.");
+        }
+        else
+        {
+            vet = _strategy.Seleccionar(cita, candidatos);
+        }
 
         vet.AsignarCita(cita.IdCita, cita.FechaCita, duracion);
         cita.AsignarVeterinario(vet.IdVeterinario);
